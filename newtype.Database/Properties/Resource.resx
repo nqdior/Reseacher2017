@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="COLUMNS" xml:space="preserve">
+    <value>SELECT
+    b.name as "tableName",
+    a.name as "columnName",
+    c.name as "type",
+    a.column_id as "order",
+    a.max_length as "length",
+    a.precision,
+    a.scale,
+    case
+        when a.is_nullable = 0
+        then '×'
+        else '〇'
+    end as "boolnull",
+    case
+        when a.is_identity = 0
+        then '0'
+        else '1'
+    end as "オートナンバー",
+    case
+        when a.default_object_id = 0
+        then '×'
+        else d.definition
+    end as 'デフォルト値',
+    case
+        when f.index_column_id is not null
+        AND e.is_primary_key = 1
+        then 'PK'
+        else '×'
+    end as 'PK'
+FROM
+    sys.columns as a
+Left outer JOIN
+    sys.objects as b
+ON
+    a.object_id = b.object_id
+Left outer JOIN
+    sys.types as c
+ON
+    a.system_type_id = c.system_type_id
+Left outer JOIN
+    sys.default_constraints as d
+ON
+    a.default_object_id = d.object_id
+Left outer JOIN
+    sys.indexes as e
+ON
+    a.object_id = e.object_id
+    AND e.is_primary_key = 1
+Left outer JOIN
+    sys.index_columns as f
+ON
+    a.object_id = f.object_id
+    AND a.column_id = f.column_id
+WHERE
+    b.type = 'U'
+    AND c.name != 'sysname'
+ORDER BY
+    b.name,
+    a.column_id</value>
+  </data>
+  <data name="DATABASE" xml:space="preserve">
+    <value>SELECT name FROM sys.databases ORDER BY database_id</value>
+  </data>
+  <data name="MESSAGE01" xml:space="preserve">
+    <value>接続に失敗しました。接続設定を開きます。</value>
+  </data>
+  <data name="MESSAGE02" xml:space="preserve">
+    <value>終了してよろしいですか？</value>
+  </data>
+  <data name="MYCOLUMNS" xml:space="preserve">
+    <value>select 
+table_name as 'tableName',
+column_name as 'columnName',
+data_type as 'type',
+character_maximum_length as 'length',
+case 
+when is_nullable = 'NO'
+then '×'
+else '〇'
+end as 'boolnull',
+column_key as 'pk'
+from information_schema.columns</value>
+  </data>
+  <data name="MYDATABASE" xml:space="preserve">
+    <value>SHOW Databases;</value>
+  </data>
+  <data name="MYTABLES" xml:space="preserve">
+    <value>select 
+T.table_name as 'Name',
+cast(T.table_rows as signed int) as 'Rows',
+cast(count(*) as signed int) as 'Columns'
+from 
+information_schema.Tables T
+left outer join information_schema.columns C
+on
+T.table_catalog = C.table_catalog
+and
+T.table_schema = C.table_schema
+and
+T.table_name = C.table_name
+where T.table_schema='{0}'
+group by 
+T.table_catalog,
+T.table_schema,
+T.table_name,
+T.table_rows</value>
+  </data>
+  <data name="PGCOLUMNS" xml:space="preserve">
+    <value>SELECT 
+c.table_name as tableName,
+c.column_name as columnName,
+c.data_type as type,
+c.character_maximum_length as length,
+case 
+when is_nullable = 'NO'
+then '×'
+else '〇'
+end as boolnull,
+case 
+when tc.constraint_type = 'PRIMARY KEY'
+then '〇'
+else '×'
+end as pk
+      FROM information_schema.columns c
+LEFT OUTER JOIN information_schema.constraint_column_usage ccu
+        ON c.table_name       = ccu.table_name
+       AND c.column_name      = ccu.column_name 
+LEFT OUTER JOIN information_schema.table_constraints tc
+        ON tc.table_catalog   = c.table_catalog
+       AND tc.table_schema    = c.table_schema
+       AND tc.table_name      = c.table_name
+       AND tc.constraint_name = ccu.constraint_name
+WHERE 
+c.table_catalog = '{0}'
+ORDER BY c.table_name
+         , c.ordinal_position</value>
+  </data>
+  <data name="PGDATABASE" xml:space="preserve">
+    <value>SELECT datname as name FROM pg_database;</value>
+  </data>
+  <data name="PGTABLES" xml:space="preserve">
+    <value>select 
+	relname as Name 
+from 
+	pg_stat_user_tables</value>
+  </data>
+  <data name="TABLES" xml:space="preserve">
+    <value>select o.name as Name, i.Rows as 'Rows', count(s.column_id) as Columns from sysindexes i, sysobjects o inner join sys.columns s on s.object_id = o.id where o.xtype = 'U' and o.id = i.id and i.indid &lt; 2 and o.name &lt;&gt; 'dtproperties' group by o.name, i.Rows order by o.name</value>
+  </data>
+</root>

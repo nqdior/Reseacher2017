@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AA89C7A9-0CB7-4693-A475-BF420BF7BDA4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>newtype.Forms</RootNamespace>
+    <AssemblyName>newtype.Forms</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\build\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="newtype.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\build\newtype.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="newtype.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\build\newtype.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="newtype.Database, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\build\newtype.Database.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="newtype.Interface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\build\newtype.Interface.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OpacityWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpacityWindow.Designer.cs">
+      <DependentUpon>OpacityWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingWindow.Designer.cs">
+      <DependentUpon>SettingWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashWindow\LogoWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashWindow\LogoWindow.Designer.cs">
+      <DependentUpon>LogoWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashWindow\SplashWindow.cs" />
+    <Compile Include="TableViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableViewer.Designer.cs">
+      <DependentUpon>TableViewer.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="OpacityWindow.resx">
+      <DependentUpon>OpacityWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingWindow.resx">
+      <DependentUpon>SettingWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashWindow\LogoWindow.resx">
+      <DependentUpon>LogoWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableViewer.resx">
+      <DependentUpon>TableViewer.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
